@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shadow maker</title>
+	<style>
+		*{
+			margin: 0;padding: 0;font-family: sans-serif;
+		}
+		body{
+			background: #1bca9b;
+		}
+		.grid{
+			display: grid;
+			grid-template-columns: 80% 20%;
+			min-height: 100vh;
+			width: 100%;
+		}
+		.app-show{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.app-controls{
+			background: #333;
+			color: #fff;
+		}
+		#box{
+			width: 50%;
+			height: 30%;
+			background: #fff;
+			text-align: center;
+		}
+		.app-control-input{
+			width: 95%;
+		}
+		#code{
+			color:#fff;width: 95%;font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<div class="app-show">
+			<div id="box">
+				#shadow box <br>shadow will be applied to this box
+			</div>
+		</div>
+		<div class="app-controls">
+			shadow-x:
+			<input class="app-control-input" type="number" placeholder="shadow-x" id="x" value="0" oninput="shadow();">
+			shadow-y:
+			<input class="app-control-input" type="number" placeholder="shadow-y" id="y" value="0" oninput="shadow();">
+			shadow-blur:
+			<input class="app-control-input" type="number" placeholder="shadow-blur" id="blur" value="0" oninput="shadow();">
+			shadow-color:
+			<input class="app-control-input" type="color" placeholder="shadow-color" id="color" oninput="shadow();">
+			border-radius:
+			<input class="app-control-input" type="number" placeholder="rad" id="rad" value="0" oninput="shadow();">
+			<br>
+			your-code: <br><br>
+			<code id="code"></code>
+		</div>
+	</div>	
+	<script>
+		function shadow(){
+			var x = document.getElementById('x');
+			var y = document.getElementById('y');
+			var blur = document.getElementById('blur');
+			var color = document.getElementById('color');
+			var box = document.getElementById('box');
+			var rad = document.getElementById('rad');
+			var code = document.getElementById('code');
+			// document.getElementById('hi').innerHTML = `${x.value} ${y.value} ${blur.value} ${color.value}`;
+			box.style.boxShadow = `${x.value}px ${y.value}px ${blur.value}px ${color.value}`;
+			box.style.borderRadius = `${rad.value}px`;
+			code.innerHTML = `box-shadow: ${x.value}px ${y.value}px ${blur.value}px ${color.value}; border-radius: ${rad.value};`;
+		}
+	</script>
+</body>
+</html>
