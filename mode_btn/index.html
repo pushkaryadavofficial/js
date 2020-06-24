@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mode_change</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<style>
+		body{
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: #fff;
+		}
+		.mode-light{
+			background: #fff;
+			color: #0A3D62;
+			padding: 0.3em;
+			border-radius: 0.4em;
+			box-shadow: 0 0 20px #A4B0BD;
+			cursor: pointer;
+		}
+		.mode-dark{
+			background:#0A3D62;
+			color:  #fff;
+			padding: 0.3em;
+			border-radius: 0.4em;
+			box-shadow: 0 0 20px #A4B0BD;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="mode-light" class="mode-light">
+		<i id="moon" onclick="modeChangeDark();" class="fas fa-3x fa-moon"></i>
+		<i id="sun" onclick="modeChangeLight();" class="fas fa-3x fa-sun" style="display: none;"></i>
+	</div>
+
+	<script>
+		function modeChangeDark() {
+			var mode = document.getElementById('mode-light')
+			var dark = document.getElementById('moon')
+			var light = document.getElementById('sun')
+			mode.className = 'mode-dark'
+			dark.style.display = 'none'
+			sun.style.display = 'block'
+		}
+		function modeChangeLight() {
+			var mode = document.getElementById('mode-light')
+			var dark = document.getElementById('moon')
+			var light = document.getElementById('sun')
+			mode.className = 'mode-light'
+			dark.style.display = 'block'
+			sun.style.display = 'none'
+		}
+	</script>
+</body>
+</html>
