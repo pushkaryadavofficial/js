@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    max-height: 100vh;
+}
+body::-webkit-scrollbar{
+    width:0.3em;
+  }
+body::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.4);
+}
+.phone{
+    height: 100vh;
+    max-height: 100vh;
+    color: #fff;
+    position: relative;
+    /* backdrop-filter: blur(5px); */
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    height 1rem:;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% auto 40%;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.027);
+}
+.left{
+    text-align: left;
+}
+.middle{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.google{
+    position: relative;
+    top: 5vh;
+    width: 70%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.315);
+    padding: 0.25rem;
+    border-radius: 0.7rem;
+}
+.speech_icon{
+    position: absolute;
+    right: 1rem;
+}
+.bottom_area{
+    position: absolute;
+    width: 94%;
+    bottom: 0.5rem;
+    margin: 1%;   
+    padding: 2%;
+    background-color: rgba(41, 40, 40, 0.24);
+    border-radius: 1rem;
+
+}
